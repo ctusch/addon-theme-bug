@@ -4,7 +4,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    outputPaths: {
+      app: {
+        css: {
+          'themes/main-theme/app': '/assets/main-theme.css'
+        }
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
